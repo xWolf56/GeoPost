@@ -4,45 +4,30 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ProgressBar;
-import android.widget.RadioButton;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
-import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.google.android.material.textfield.TextInputEditText;
-import com.vishnusivadas.advanced_httpurlconnection.FetchData;
-import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-
 public class SignUp extends AppCompatActivity {
 
     TextInputEditText textInputEditTextLastName, textInputEditTextFirstName, textInputEditTextPassword, textInputEditTextEmail, textInputEditTextBirthday;
-
     ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+        progressBar = findViewById(R.id.progress);
 
         if (SharedPrefManager.getInstance(this).isLoggedIn()) {
             finish();
@@ -55,7 +40,6 @@ public class SignUp extends AppCompatActivity {
         textInputEditTextPassword = findViewById(R.id.password);
         textInputEditTextEmail = findViewById(R.id.email);
         textInputEditTextBirthday = findViewById(R.id.birth_date);
-        progressBar = findViewById(R.id.progress);
 
         findViewById(R.id.buttonSignUp).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,7 +65,6 @@ public class SignUp extends AppCompatActivity {
         final String password = textInputEditTextPassword.getText().toString().trim();
         final String birthdate = textInputEditTextBirthday.getText().toString().trim();
 
-        //first we will do the validations
         if (TextUtils.isEmpty(firstName)) {
             textInputEditTextFirstName.setError("Please enter your first name");
             textInputEditTextFirstName.requestFocus();
@@ -118,7 +101,7 @@ public class SignUp extends AppCompatActivity {
             return;
         }
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, URLs.URL_REGISTER,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, String.format(URLs.URL_REGISTER, lastName, firstName, email, password, birthdate),
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -130,13 +113,11 @@ public class SignUp extends AppCompatActivity {
                             if (!obj.getBoolean("error")) {
                                 Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_SHORT).show();
 
-                                JSONObject userJson = obj.getJSONObject("user");
-
                                 User user = new User(
-                                        userJson.getString("firstname"),
-                                        userJson.getString("lastname"),
-                                        userJson.getString("email"),
-                                        userJson.getString("birthdate")
+                                        obj.getString("firstName"),
+                                        obj.getString("lastName"),
+                                        obj.getString("email"),
+                                        obj.getString("birthDate")
                                 );
 
                                 SharedPrefManager.getInstance(getApplicationContext()).userLogin(user);
@@ -156,18 +137,7 @@ public class SignUp extends AppCompatActivity {
                     public void onErrorResponse(VolleyError error) {
                         Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
                     }
-                }) {
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> params = new HashMap<>();
-                params.put("First Name", firstName);
-                params.put("Last Name", lastName);
-                params.put("email", email);
-                params.put("birthdate", birthdate);
-                params.put("password", password);
-                return params;
-            }
-        };
+                });
 
         VolleySingleton.getInstance(this).addToRequestQueue(stringRequest);
     }

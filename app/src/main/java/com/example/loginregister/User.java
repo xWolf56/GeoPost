@@ -1,7 +1,5 @@
 package com.example.loginregister;
 
-import java.util.Date;
-
 public class User {
     private String first_name, last_name, email, birthday;
 

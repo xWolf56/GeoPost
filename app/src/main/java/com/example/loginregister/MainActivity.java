@@ -1,16 +1,16 @@
 package com.example.loginregister;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class MainActivity extends AppCompatActivity {
 
-    TextView id, firstName, lastName, userEmail, birthdate;
+    TextView firstName, lastName, userEmail, birthdate;
     Button btnLogout;
 
     @Override
@@ -32,21 +32,15 @@ public class MainActivity extends AppCompatActivity {
             firstName.setText(user.getFirstName());
             birthdate.setText(user.getBirthday());
 
-            btnLogout.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(getApplicationContext(), Login.class);
-                    startActivity(intent);
-                    finish();
-                }
-            });
+            btnLogout.setOnClickListener(this::onClick);
         }
         else{
-            Intent intent = new Intent(MainActivity.this,Login.class);
+            Intent intent = new Intent(MainActivity.this, Login.class);
             startActivity(intent);
             finish();
         }
     }
+
     public void onClick(View view){
         if(view.equals(btnLogout)){
             SharedPrefManager.getInstance(getApplicationContext()).logout();
