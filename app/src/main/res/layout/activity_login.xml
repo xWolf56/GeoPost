@@ -11,7 +11,7 @@
         android:id="@+id/loginTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="92dp"
         android:background="#66003CD3"
         android:fontFamily="@font/poppinsbold"
         android:gravity="center"
@@ -52,7 +52,8 @@
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_email"
                 android:fontFamily="@font/poppinsmedium"
-                tools:targetApi="jelly_bean" />
+                tools:targetApi="jelly_bean"
+                tools:text="example@mail.com" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -71,6 +72,7 @@
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_pass"
                 android:fontFamily="@font/poppinsmedium"
+                android:text="password"
                 tools:targetApi="jelly_bean" />
         </com.google.android.material.textfield.TextInputLayout>
 
