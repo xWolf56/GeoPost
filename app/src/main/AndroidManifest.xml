@@ -17,6 +17,9 @@
         android:theme="@style/Theme.LoginRegister"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".UserProfile"
+            android:exported="false" />
+        <activity
             android:name=".ProfileInterface"
             android:exported="false" />
         <activity
