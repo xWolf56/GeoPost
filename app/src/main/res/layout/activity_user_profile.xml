@@ -176,7 +176,7 @@
             app:layout_constraintTop_toBottomOf="@+id/latestPostImageView" />
 
         <TextView
-            android:id="@+id/LatestPostLocationTextView"
+            android:id="@+id/latestPostLocationTextView"
             android:layout_width="170dp"
             android:layout_height="30dp"
             android:layout_marginTop="5dp"

@@ -120,7 +120,7 @@ public class Login extends AppCompatActivity {
                                 SharedPrefManager.getInstance(getApplicationContext()).userLogin(user);
 
                                 finish();
-                                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                startActivity(new Intent(getApplicationContext(), UserProfile.class));
                             } else {
                                 Toast.makeText(getApplicationContext(),  obj.getString("message"), Toast.LENGTH_SHORT).show();
                             }
