@@ -15,14 +15,14 @@ public class UserProfile extends AppCompatActivity {
     ImageView profilePicture, latestPost;
     Button consultPost, logoutButton;
 
-    GPSLocation gpsLocation = new GPSLocation(this);
+    //GPSLocation gpsLocation = new GPSLocation(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
 
-        gpsLocation.requestGPSPermission();
+        //gpsLocation.requestGPSPermission();
 
         if(SharedPrefManager.getInstance(this).isLoggedIn()) {
 

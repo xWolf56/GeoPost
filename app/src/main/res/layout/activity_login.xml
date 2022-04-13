@@ -53,7 +53,7 @@
                 android:drawableEnd="@drawable/ic_email"
                 android:fontFamily="@font/poppinsmedium"
                 tools:targetApi="jelly_bean"
-                tools:text="example@mail.com" />
+                tools:text="example@gmail.com" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -72,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_pass"
                 android:fontFamily="@font/poppinsmedium"
-                android:text="password"
+                android:text="@string/password"
                 tools:targetApi="jelly_bean" />
         </com.google.android.material.textfield.TextInputLayout>
 
