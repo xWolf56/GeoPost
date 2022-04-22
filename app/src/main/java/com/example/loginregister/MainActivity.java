@@ -29,6 +29,10 @@ public class MainActivity extends AppCompatActivity {
 
         gpsLocation.requestGPSPermission();
 
+        Intent intent = new Intent(MainActivity.this, ActivityStream.class);
+        startActivity(intent);
+        finish();
+/*
         if(SharedPrefManager.getInstance(this).isLoggedIn()) {
             firstName = findViewById(R.id.textViewFirstName);
             lastName = findViewById(R.id.textViewLastName);
@@ -48,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, Login.class);
             startActivity(intent);
             finish();
-        }
+        }*/
     }
 
     @Override
@@ -73,6 +77,5 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
-
 
 

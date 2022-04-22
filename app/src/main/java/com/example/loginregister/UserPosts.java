@@ -3,8 +3,6 @@ package com.example.loginregister;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 
 public class UserPosts extends AppCompatActivity {
 
@@ -16,7 +14,7 @@ public class UserPosts extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_posts);
+        setContentView(R.layout.activity_user_profile);
 
         //  Here we pass through a loop to create an ImageView for every Post
         //  and add the coordinate of those post right below each posts.

@@ -28,7 +28,7 @@ public class UserProfile extends AppCompatActivity {
 
             fullName = findViewById(R.id.fullNameTextView);
             email = findViewById(R.id.emailTextView);
-            birthdate = findViewById(R.id.textViewBirthday);
+            birthdate = findViewById(R.id.birthdateTextView);
 
             profilePicture = findViewById(R.id.profileImageView);
             latestPost = findViewById(R.id.latestPostImageView);

@@ -16,4 +16,21 @@
     <string name="postDate">Date:</string>
     <string name="postLocation">Where it was taken:</string>
     <string name="latestPostLocation">Post location...</string>
+
+    <string name="profileNav">Profile</string>
+    <string name="activityStreamNav">Activity stream</string>
+    <string name="makePostNav">Make a post</string>
+    <string name="sendMessageNav">Send a message</string>
+    <string name="settingNav">Settings</string>
+
+    <string name="Open">Open</string>
+    <string name="Close">Close</string>
+    <string name="title_activity_stream">ActivityStream</string>
+    <string name="action_settings">Settings</string>
+    <string name="user_name">UserName</string>
+    <string name="time_of_post">0 hrs ago</string>
+    <string name="brief_post_description">Post descriptions</string>
+    <string name="post_like_count">0</string>
+    <string name="comments_count">0</string>
+
 </resources>
