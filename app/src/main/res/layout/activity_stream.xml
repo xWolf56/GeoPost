@@ -11,10 +11,11 @@
         android:layout_height="65dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:src="@drawable/profile_icon"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/profileImageButton"
+        app:srcCompat="@drawable/ic_user" />
 
     <TextView
         android:id="@+id/usernameTextView"
@@ -51,9 +52,9 @@
         android:id="@+id/postImageView"
         android:layout_width="0dp"
         android:layout_height="220dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="10dp"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -118,4 +119,67 @@
         app:layout_constraintBottom_toBottomOf="@+id/commentsImageView"
         app:layout_constraintEnd_toStartOf="@+id/commentsImageView"
         app:layout_constraintTop_toTopOf="@+id/commentsImageView" />
+
+    <ImageButton
+        android:id="@+id/profileImageButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="User profile"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/profile_icon" />
+
+    <ImageButton
+        android:id="@+id/searchImageButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="Search"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/usernameTextView"
+        app:layout_constraintEnd_toStartOf="@+id/newPostImageButton"
+        app:layout_constraintStart_toEndOf="@+id/profileImageButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/search" />
+
+    <ImageButton
+        android:id="@+id/newPostImageButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="Make a new post"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/messageImageButton"
+        app:layout_constraintStart_toEndOf="@+id/searchImageButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/add_post_icon" />
+
+    <ImageButton
+        android:id="@+id/messageImageButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="Messages"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/parameterImageButton"
+        app:layout_constraintStart_toEndOf="@+id/newPostImageButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/message_icon" />
+
+    <ImageButton
+        android:id="@+id/parameterImageButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="Parameters"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/setting_icon" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
