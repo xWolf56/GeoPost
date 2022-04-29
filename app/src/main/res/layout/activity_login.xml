@@ -72,8 +72,8 @@
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_pass"
                 android:fontFamily="@font/poppinsmedium"
-                android:text="@string/password"
-                tools:targetApi="jelly_bean" />
+                tools:targetApi="jelly_bean"
+                tools:text="@string/password" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <ProgressBar

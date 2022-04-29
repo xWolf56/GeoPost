@@ -18,6 +18,69 @@
         android:background="#FFFFFF"
         tools:context=".UserProfile">
 
+        <ImageButton
+            android:id="@+id/profileImageButton3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="User profile"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toStartOf="@+id/searchImageButton3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/profile_icon" />
+
+        <ImageButton
+            android:id="@+id/searchImageButton3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="Search"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toStartOf="@+id/newPostImageButton3"
+            app:layout_constraintStart_toEndOf="@+id/profileImageButton3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/search" />
+
+        <ImageButton
+            android:id="@+id/newPostImageButton3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="Make a new post"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/UserImageBackgroundImageView"
+            app:layout_constraintEnd_toStartOf="@+id/messageImageButton3"
+            app:layout_constraintStart_toEndOf="@+id/searchImageButton3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/add_post_icon" />
+
+        <ImageButton
+            android:id="@+id/messageImageButton3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="Messages"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toStartOf="@+id/parameterImageButton3"
+            app:layout_constraintStart_toEndOf="@+id/newPostImageButton3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/message_icon" />
+
+        <ImageButton
+            android:id="@+id/parameterImageButton3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="Parameters"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/messageImageButton3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/setting_icon" />
+
         <TextView
             android:id="@+id/emailTextView"
             android:layout_width="wrap_content"
@@ -92,7 +155,6 @@
             android:id="@+id/fullNameTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
             android:fontFamily="serif"
             android:textAlignment="center"
             android:textColor="#000000"
@@ -100,7 +162,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/profileImageView"
+            app:layout_constraintTop_toBottomOf="@+id/UserImageBackgroundImageView"
             tools:text="Full Name" />
 
         <ImageView
@@ -118,21 +180,23 @@
             android:id="@+id/UserImageBackgroundImageView"
             android:layout_width="392dp"
             android:layout_height="198dp"
+            android:layout_marginTop="10dp"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newPostImageButton3"
             app:srcCompat="@drawable/borderfull01brighter" />
 
         <ImageView
             android:id="@+id/profileImageView"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginTop="30dp"
             android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/UserImageBackgroundImageView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newPostImageButton3"
             app:srcCompat="@drawable/martin_coffee" />
 
         <Button
@@ -223,7 +287,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/fullNameTextView"
+            app:layout_constraintTop_toBottomOf="@+id/UserImageBackgroundImageView"
             tools:srcCompat="@drawable/Corners01" />
 
         <Button
