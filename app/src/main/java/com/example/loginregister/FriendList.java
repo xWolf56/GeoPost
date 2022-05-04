@@ -1,8 +1,10 @@
 package com.example.loginregister;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.RadioButton;
 
 public class FriendList extends AppCompatActivity {
 

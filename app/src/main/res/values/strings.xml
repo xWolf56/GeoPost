@@ -33,4 +33,8 @@
     <string name="post_like_count">0</string>
     <string name="comments_count">0</string>
 
+    <string name="friends_list">Friends list</string>
+    <string name="pending_invitations">Pending invitations</string>
+    <string name="invite_friends">Friends list</string>
+
 </resources>

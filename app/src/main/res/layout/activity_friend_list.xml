@@ -1,9 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentScrollView"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".FriendList">
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:fillViewport="false"
+    android:orientation="vertical"
+    android:padding="10dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        tools:context=".FriendList">
+
+        <ImageButton
+            android:id="@+id/profileImageButton2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="User profile"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toStartOf="@+id/searchImageButton2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/profile_icon" />
+
+        <ImageButton
+            android:id="@+id/searchImageButton2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="Search"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toStartOf="@+id/newPostImageButton2"
+            app:layout_constraintStart_toEndOf="@+id/profileImageButton2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/search" />
+
+        <ImageButton
+            android:id="@+id/newPostImageButton2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="Make a new post"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toStartOf="@+id/messageImageButton2"
+            app:layout_constraintStart_toEndOf="@+id/searchImageButton2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/add_post_icon" />
+
+        <ImageButton
+            android:id="@+id/messageImageButton2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="Messages"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toStartOf="@+id/parameterImageButton2"
+            app:layout_constraintStart_toEndOf="@+id/newPostImageButton2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/message_icon" />
+
+        <ImageButton
+            android:id="@+id/parameterImageButton2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="Parameters"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/messageImageButton2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/setting_icon" />
+
+        <RadioButton
+            android:id="@+id/friendsListRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:text="Friends list"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/pendingInvitationsRadioButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newPostImageButton2" />
+
+        <RadioButton
+            android:id="@+id/pendingInvitationsRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Pending Invitations"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/addFriendRadioButton"
+            app:layout_constraintStart_toEndOf="@+id/friendsListRadioButton"
+            app:layout_constraintTop_toBottomOf="@+id/newPostImageButton2" />
+
+        <RadioButton
+            android:id="@+id/addFriendRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:text="Add a friend"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/pendingInvitationsRadioButton"
+            app:layout_constraintTop_toBottomOf="@+id/newPostImageButton2" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/friendListRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pendingInvitationsRadioButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
