@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:foregroundTint="#FFFFFF"
     tools:context=".Settings">
 
     <Button
@@ -21,7 +22,7 @@
         android:id="@+id/settingsGoBackButton"
         android:layout_width="161dp"
         android:layout_height="76dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="88dp"
         android:background="#00FFFFFF"
         android:backgroundTint="#00FFFFFF"
         android:fontFamily="serif"
@@ -67,5 +68,42 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/geopost_logo" />
+
+    <Button
+        android:id="@+id/deleteAccountButton"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="7dp"
+        android:background="#00FFFFFF"
+        android:textColor="#FF0000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/settingsLogoutButton"
+        app:layout_constraintStart_toEndOf="@+id/warning1ImageView"
+        app:layout_constraintTop_toBottomOf="@+id/settingsGoBackButton"
+        tools:text="DELETE ACCOUNT" />
+
+    <ImageView
+        android:id="@+id/warning1ImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="130dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/deleteAccountButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/warning" />
+
+    <ImageView
+        android:id="@+id/warning2ImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="130dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/deleteAccountButton"
+        app:srcCompat="@drawable/warning" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
