@@ -17,6 +17,9 @@
         android:theme="@style/Theme.LoginRegister"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".AboutFaitBo"
+            android:exported="false" />
+        <activity
             android:name=".Settings"
             android:exported="false" />
         <activity
