@@ -19,13 +19,13 @@
         <entry key="..\:/Users/marti/AndroidStudioProjects/GeoPost/app/src/main/res/layout/activity_settings.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/marti/AndroidStudioProjects/GeoPost/app/src/main/res/layout/activity_show_friend.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/marti/AndroidStudioProjects/GeoPost/app/src/main/res/layout/activity_sign_up.xml" value="0.15" />
-        <entry key="..\:/Users/marti/AndroidStudioProjects/GeoPost/app/src/main/res/layout/activity_stream.xml" value="0.4" />
+        <entry key="..\:/Users/marti/AndroidStudioProjects/GeoPost/app/src/main/res/layout/activity_stream.xml" value="0.27184466019417475" />
         <entry key="..\:/Users/marti/AndroidStudioProjects/GeoPost/app/src/main/res/layout/activity_user_posts.xml" value="0.4" />
         <entry key="..\:/Users/marti/AndroidStudioProjects/GeoPost/app/src/main/res/layout/activity_user_profile.xml" value="0.536" />
         <entry key="..\:/Users/marti/AndroidStudioProjects/GeoPost/app/src/main/res/layout/content_scrolling.xml" value="0.4" />
         <entry key="..\:/Users/marti/AndroidStudioProjects/GeoPost/app/src/main/res/layout/navigation_header.xml" value="0.16770833333333332" />
-        <entry key="..\:/Users/marti/AndroidStudioProjects/GeoPost/app/src/main/res/layout/rv_add_friend.xml" value="0.4" />
-        <entry key="..\:/Users/marti/AndroidStudioProjects/GeoPost/app/src/main/res/layout/rv_friend_list.xml" value="0.536" />
+        <entry key="..\:/Users/marti/AndroidStudioProjects/GeoPost/app/src/main/res/layout/rv_add_friend.xml" value="0.25925925925925924" />
+        <entry key="..\:/Users/marti/AndroidStudioProjects/GeoPost/app/src/main/res/layout/rv_friend_list.xml" value="0.19377162629757785" />
         <entry key="..\:/Users/marti/AndroidStudioProjects/GeoPost/app/src/main/res/layout/rv_item.xml" value="0.536" />
         <entry key="..\:/Users/marti/AndroidStudioProjects/GeoPost/app/src/main/res/layout/rv_pending_invitation.xml" value="0.536" />
         <entry key="..\:/Users/marti/AndroidStudioProjects/GeoPost/app/src/main/res/menu/bottom_nav_menu.xml" value="0.5478515625" />

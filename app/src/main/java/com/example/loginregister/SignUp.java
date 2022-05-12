@@ -1,5 +1,6 @@
 package com.example.loginregister;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -28,6 +29,10 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
         progressBar = findViewById(R.id.progress);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setIcon(R.mipmap.ic_geopost_logo);
 
         if (SharedPrefManager.getInstance(this).isLoggedIn()) {
             finish();
